@@ -1,0 +1,89 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.login-box p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-google {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-google:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-microsoft {
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+}
+
+.btn-microsoft:hover {
+    background-color: #106ebe;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
