@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import TextScanner from './features/TextScanner';
 
 // Import your feature components here, e.g.,
 // import AcademicPrograms from './features/AcademicPrograms';
@@ -25,6 +26,7 @@ function App() {
         <Route path='/past-question-papers' component={PastQuestionPapers} />
         <Route path='/student-counselling' component={StudentCounselling} />
         <Route path='/univen-admin' component={UNIVENAdmin} />
+        <Route path='/text-scanner' component={TextScanner} />
         <Route path='/' component={Home} /> {/* Default route */}
       </Switch>
     </Router>
