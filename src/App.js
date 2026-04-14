@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import TextHumanizer from './features/TextHumanizer';
+import TextScanner from './features/TextScanner';
 
 // Import your feature components here, e.g.,
 // import AcademicPrograms from './features/AcademicPrograms';
@@ -24,6 +26,8 @@ function App() {
         <Route path='/my-access' component={MyAccess} />
         <Route path='/past-question-papers' component={PastQuestionPapers} />
         <Route path='/student-counselling' component={StudentCounselling} />
+        <Route path='/text-humanizer' component={TextHumanizer} />
+        <Route path='/text-scanner' component={TextScanner} />
         <Route path='/univen-admin' component={UNIVENAdmin} />
         <Route path='/' component={Home} /> {/* Default route */}
       </Switch>
