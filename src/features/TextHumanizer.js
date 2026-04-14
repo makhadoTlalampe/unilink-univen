@@ -93,7 +93,7 @@ const TextHumanizer = () => {
                     />
                     <div className="panel-footer">
                         <span className="word-count">
-                            {inputText.trim() ? inputText.trim().split(/\s+/).length : 0} words
+                            {inputText.trim().split(/\s+/).filter(Boolean).length} words
                         </span>
                         <button
                             className="btn-primary"
@@ -130,7 +130,7 @@ const TextHumanizer = () => {
                     </div>
                     <div className="panel-footer">
                         <span className="word-count">
-                            {outputText ? outputText.trim().split(/\s+/).length : 0} words
+                            {outputText ? outputText.split(/\s+/).filter(Boolean).length : 0} words
                         </span>
                     </div>
                 </div>

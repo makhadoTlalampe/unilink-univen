@@ -113,7 +113,8 @@ const TextScanner = () => {
         setScanned(false);
     };
 
-    const wordCount = inputText.trim() ? inputText.trim().split(/\s+/).length : 0;
+    const trimmedInput = inputText.trim();
+    const wordCount = trimmedInput ? trimmedInput.split(/\s+/).length : 0;
     const tooShort = wordCount > 0 && wordCount < MIN_WORDS;
 
     return (
@@ -154,7 +155,7 @@ const TextScanner = () => {
                     <button
                         className="btn-primary"
                         onClick={handleScan}
-                        disabled={!inputText.trim() || tooShort}
+                        disabled={!trimmedInput || tooShort}
                     >
                         Scan Text
                     </button>

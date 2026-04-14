@@ -266,7 +266,7 @@ export function breakLongSentences(text, maxWords = 30) {
             if (words.length <= maxWords) return sentence;
             const midpoint = Math.floor(words.length / 2);
             const conjunctions = ['and', 'but', 'so', 'yet', 'or', 'because', 'while', 'although'];
-            for (let i = midpoint; i < words.length - 3; i++) {
+            for (let i = midpoint; i < words.length - 1; i++) {
                 const word = words[i].toLowerCase().replace(/[^a-z]/g, '');
                 if (conjunctions.includes(word)) {
                     const first = words.slice(0, i).join(' ');
