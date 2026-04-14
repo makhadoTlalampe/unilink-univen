@@ -1,0 +1,354 @@
+/* TextScanner.css – styles for the AI Content Scanner feature */
+
+/* ── Layout ── */
+.ts-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* ── Header ── */
+.ts-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.ts-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #764ba2;
+  margin-bottom: 8px;
+}
+
+.ts-subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ── Input section ── */
+.ts-input-section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ts-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  line-height: 1.6;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.ts-textarea:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.15);
+}
+
+/* ── Action buttons ── */
+.ts-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.ts-btn {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.ts-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ts-btn-sample {
+  background: #eee;
+  color: #444;
+}
+
+.ts-btn-sample:hover:not(:disabled) {
+  background: #ddd;
+}
+
+.ts-btn-clear {
+  background: #ffe0e0;
+  color: #c62828;
+}
+
+.ts-btn-clear:hover:not(:disabled) {
+  background: #ffcdd2;
+}
+
+.ts-btn-scan {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.ts-btn-scan:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+/* ── Report ── */
+.ts-report {
+  margin-top: 32px;
+}
+
+/* ── Verdict card ── */
+.ts-verdict-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ts-verdict-left {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* ── Verdict badge ── */
+.verdict-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.badge-ai {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.badge-mixed {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffcc80;
+}
+
+.badge-uncertain {
+  background: #fffde7;
+  color: #f57f17;
+  border: 1px solid #fff176;
+}
+
+.badge-human {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+/* ── Overall score display ── */
+.ts-overall-score {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.ts-score-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #764ba2;
+  line-height: 1;
+}
+
+.ts-score-unit {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+.ts-confidence-note {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* ── Stats ── */
+.ts-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.ts-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f3ff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  min-width: 80px;
+}
+
+.ts-stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #764ba2;
+  line-height: 1;
+}
+
+.ts-stat-label {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Section title ── */
+.ts-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ede7f6;
+}
+
+/* ── Check cards grid ── */
+.ts-checks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.ts-check-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ts-check-header {
+  margin-bottom: 10px;
+}
+
+.ts-check-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ── Score bar ── */
+.score-bar-container {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 6px;
+  height: 14px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+
+.score-bar-label {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #444;
+  line-height: 1;
+}
+
+.ts-check-detail {
+  font-size: 0.83rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Limitations box ── */
+.ts-limitations {
+  background: #fffde7;
+  border: 1px solid #fff176;
+  border-radius: 8px;
+  padding: 18px 22px;
+}
+
+.ts-limitations h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f57f17;
+  margin: 0 0 10px;
+}
+
+.ts-limitations ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.ts-limitations li {
+  font-size: 0.83rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+/* ── Error message ── */
+.ts-error {
+  color: #c62828;
+  font-size: 0.9rem;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .ts-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .ts-verdict-card {
+    flex-direction: column;
+  }
+
+  .ts-checks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-stats {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

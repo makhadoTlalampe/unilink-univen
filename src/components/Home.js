@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const features = [
     'Feature 1',
@@ -26,6 +27,26 @@ const Home = () => {
                     <h3>{feature}</h3>
                 </div>
             ))}
+            <Link
+                to="/text-scanner"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+                <div
+                    style={{
+                        border: '1px solid #764ba2',
+                        padding: '20px',
+                        textAlign: 'center',
+                        borderRadius: '8px',
+                        background: 'linear-gradient(135deg, #f5f3ff 0%, #ede7f6 100%)',
+                        cursor: 'pointer',
+                    }}
+                >
+                    <h3 style={{ color: '#764ba2', margin: 0 }}>🔍 AI Content Scanner</h3>
+                    <p style={{ color: '#555', fontSize: '0.85rem', marginTop: '8px' }}>
+                        Scan pasted text for AI-generated content
+                    </p>
+                </div>
+            </Link>
         </div>
     );
 };
