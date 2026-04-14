@@ -121,7 +121,7 @@ const TextScanner = () => {
             <div className="scanner-header">
                 <h1>🔍 Text Scanner</h1>
                 <p className="scanner-subtitle">
-                    Paste or type any text below to analyse whether it shows signs of being
+                    Paste or type any text below to analyze whether it shows signs of being
                     AI-generated. No files needed — just copy and paste your content.
                 </p>
             </div>

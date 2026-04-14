@@ -104,7 +104,7 @@ export function detectAIPhrases(text) {
         'as a language model',
     ];
     const lower = text.toLowerCase();
-    return aiPhrases.filter(phrase => lower.includes(phrase.toLowerCase()));
+    return aiPhrases.filter(phrase => lower.includes(phrase));
 }
 
 /**
@@ -286,7 +286,7 @@ export function breakLongSentences(text, maxWords = 30) {
  */
 export function removeRedundancy(text) {
     return text
-        .replace(/\b(very very|really really|just just|so so)\b/gi, (_, w) => w.split(' ')[0])
+        .replace(/\b(very|really|just|so) \1\b/gi, '$1')
         .replace(/\b(in terms of|with regard to|with respect to)\b/gi, 'regarding');
 }
 
