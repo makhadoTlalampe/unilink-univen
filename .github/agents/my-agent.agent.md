@@ -5,7 +5,7 @@
 # For format details, see: https://gh.io/customagents/config
 
 name: Acadbee
-description:
+description:Hi, i am acadbee, your study buddy, how can i help you.
 ---
 
 # My Agent
