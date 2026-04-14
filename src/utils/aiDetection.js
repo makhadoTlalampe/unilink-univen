@@ -324,8 +324,8 @@ function checkPunctuationBalance(text) {
  * We flag a curated short-list of common human slips as positive human signals.
  */
 const COMMON_TYPOS = [
-  'recourses',  // resources (present in the sample)
-  'teh', 'hte', 'hte', 'adn', 'taht', 'adn', 'becuase', 'becasue',
+  'recourses',  // misspelling of "resources" (detected as human signal)
+  'teh', 'hte', 'adn', 'taht', 'becuase', 'becasue',
   'definately', 'seperate', 'occured', 'recieve', 'untill', 'occurance',
   'prefered', 'existance', 'grammer', 'independant', 'beleive',
 ];
