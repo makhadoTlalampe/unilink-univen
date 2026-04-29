@@ -1,10 +1,8 @@
-'use strict';
-
-// Import Firebase modules
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/database';
-import 'firebase/auth';
+// Import Firebase modules (v9 modular SDK)
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { getDatabase } from 'firebase/database';
+import { getAuth } from 'firebase/auth';
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -18,15 +16,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 // Initialize Firestore
-const db = firebase.firestore();
+const db = getFirestore(app);
 
 // Initialize Realtime Database
-const realTimeDb = firebase.database();
+const realTimeDb = getDatabase(app);
 
 // Initialize Authentication
-const auth = firebase.auth();
+const auth = getAuth(app);
 
-export { db, realTimeDb, auth };
+export { app, db, realTimeDb, auth };

@@ -1,0 +1,137 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home-header {
+    background: linear-gradient(135deg, #1a3a5c 0%, #2d6a9f 100%);
+    color: white;
+    padding: 0 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.home-brand h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.home-brand p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.home-user-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.home-user-name {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.home-signout-btn,
+.home-signin-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+
+.home-signout-btn:hover,
+.home-signin-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.home-main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    width: 100%;
+}
+
+.home-section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a3a5c;
+    margin-bottom: 24px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    font-size: 36px;
+    margin-bottom: 4px;
+}
+
+.feature-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a3a5c;
+}
+
+.feature-description {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.home-footer {
+    background: #1a3a5c;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-brand h1 {
+        font-size: 18px;
+    }
+}

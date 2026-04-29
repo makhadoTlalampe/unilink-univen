@@ -1,6 +1,12 @@
-import React, { createContext, useContext, useState } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { auth } from '../firebaseConfig';
+import {
+    GoogleAuthProvider,
+    OAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+} from 'firebase/auth';
 
 const AuthContext = createContext();
 
@@ -9,23 +15,26 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     const handleSignInWithGoogle = async () => {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        await firebase.auth().signInWithPopup(provider);
+        const provider = new GoogleAuthProvider();
+        await signInWithPopup(auth, provider);
     };
 
     const handleSignInWithMicrosoft = async () => {
-        const provider = new firebase.auth.OAuthProvider('microsoft.com');
-        await firebase.auth().signInWithPopup(provider);
+        const provider = new OAuthProvider('microsoft.com');
+        await signInWithPopup(auth, provider);
     };
 
     const handleSignOut = async () => {
-        await firebase.auth().signOut();
+        await signOut(auth);
     };
 
-    firebase.auth().onAuthStateChanged((user) => {
-        setCurrentUser(user);
-        setLoading(false);
-    });
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setCurrentUser(user);
+            setLoading(false);
+        });
+        return unsubscribe;
+    }, []);
 
     return (
         <AuthContext.Provider value={{ currentUser, handleSignInWithGoogle, handleSignInWithMicrosoft, handleSignOut }}>
